@@ -1,0 +1,383 @@
+###############################################################################
+#
+# IAR ELF Linker V8.22.1.15669/W32 for ARM                28/Nov/2021  11:04:30
+# Copyright 2007-2018 IAR Systems AB.
+#
+#    Output file  =  
+#        D:\SVN\Fudan\Fudan Lib\Fudan Lib 0.0.4\ADC internal accumulation mode
+#        query (conversion voltage)\IAR_EWARM\Debug\Exe\FM33A0XXEV.out
+#    Map file     =  
+#        D:\SVN\Fudan\Fudan Lib\Fudan Lib 0.0.4\ADC internal accumulation mode
+#        query (conversion voltage)\IAR_EWARM\Debug\List\FM33A0XXEV.map
+#    Command line =  
+#        -f C:\Users\MOHAME~1.HAF\AppData\Local\Temp\EW3B40.tmp
+#        ("D:\SVN\Fudan\Fudan Lib\Fudan Lib 0.0.4\ADC internal accumulation
+#        mode query (conversion voltage)\IAR_EWARM\Debug\Obj\ADC_interface.o"
+#        "D:\SVN\Fudan\Fudan Lib\Fudan Lib 0.0.4\ADC internal accumulation mode
+#        query (conversion voltage)\IAR_EWARM\Debug\Obj\fm33a0xxev_adc.o"
+#        "D:\SVN\Fudan\Fudan Lib\Fudan Lib 0.0.4\ADC internal accumulation mode
+#        query (conversion voltage)\IAR_EWARM\Debug\Obj\fm33a0xxev_aes.o"
+#        "D:\SVN\Fudan\Fudan Lib\Fudan Lib 0.0.4\ADC internal accumulation mode
+#        query (conversion voltage)\IAR_EWARM\Debug\Obj\fm33a0xxev_bstim.o"
+#        "D:\SVN\Fudan\Fudan Lib\Fudan Lib 0.0.4\ADC internal accumulation mode
+#        query (conversion voltage)\IAR_EWARM\Debug\Obj\fm33a0xxev_bt.o"
+#        "D:\SVN\Fudan\Fudan Lib\Fudan Lib 0.0.4\ADC internal accumulation mode
+#        query (conversion voltage)\IAR_EWARM\Debug\Obj\fm33a0xxev_cdif.o"
+#        "D:\SVN\Fudan\Fudan Lib\Fudan Lib 0.0.4\ADC internal accumulation mode
+#        query (conversion voltage)\IAR_EWARM\Debug\Obj\fm33a0xxev_cmu.o"
+#        "D:\SVN\Fudan\Fudan Lib\Fudan Lib 0.0.4\ADC internal accumulation mode
+#        query (conversion voltage)\IAR_EWARM\Debug\Obj\fm33a0xxev_comp.o"
+#        "D:\SVN\Fudan\Fudan Lib\Fudan Lib 0.0.4\ADC internal accumulation mode
+#        query (conversion voltage)\IAR_EWARM\Debug\Obj\fm33a0xxev_crc.o"
+#        "D:\SVN\Fudan\Fudan Lib\Fudan Lib 0.0.4\ADC internal accumulation mode
+#        query (conversion voltage)\IAR_EWARM\Debug\Obj\fm33a0xxev_dbg.o"
+#        "D:\SVN\Fudan\Fudan Lib\Fudan Lib 0.0.4\ADC internal accumulation mode
+#        query (conversion voltage)\IAR_EWARM\Debug\Obj\fm33a0xxev_dma.o"
+#        "D:\SVN\Fudan\Fudan Lib\Fudan Lib 0.0.4\ADC internal accumulation mode
+#        query (conversion voltage)\IAR_EWARM\Debug\Obj\fm33a0xxev_et.o"
+#        "D:\SVN\Fudan\Fudan Lib\Fudan Lib 0.0.4\ADC internal accumulation mode
+#        query (conversion voltage)\IAR_EWARM\Debug\Obj\fm33a0xxev_flash.o"
+#        "D:\SVN\Fudan\Fudan Lib\Fudan Lib 0.0.4\ADC internal accumulation mode
+#        query (conversion voltage)\IAR_EWARM\Debug\Obj\fm33a0xxev_gpio.o"
+#        "D:\SVN\Fudan\Fudan Lib\Fudan Lib 0.0.4\ADC internal accumulation mode
+#        query (conversion voltage)\IAR_EWARM\Debug\Obj\fm33a0xxev_hash.o"
+#        "D:\SVN\Fudan\Fudan Lib\Fudan Lib 0.0.4\ADC internal accumulation mode
+#        query (conversion voltage)\IAR_EWARM\Debug\Obj\fm33a0xxev_i2c.o"
+#        "D:\SVN\Fudan\Fudan Lib\Fudan Lib 0.0.4\ADC internal accumulation mode
+#        query (conversion voltage)\IAR_EWARM\Debug\Obj\fm33a0xxev_iwdt.o"
+#        "D:\SVN\Fudan\Fudan Lib\Fudan Lib 0.0.4\ADC internal accumulation mode
+#        query (conversion voltage)\IAR_EWARM\Debug\Obj\fm33a0xxev_lcd.o"
+#        "D:\SVN\Fudan\Fudan Lib\Fudan Lib 0.0.4\ADC internal accumulation mode
+#        query (conversion voltage)\IAR_EWARM\Debug\Obj\fm33a0xxev_lptim.o"
+#        "D:\SVN\Fudan\Fudan Lib\Fudan Lib 0.0.4\ADC internal accumulation mode
+#        query (conversion voltage)\IAR_EWARM\Debug\Obj\fm33a0xxev_lpuart.o"
+#        "D:\SVN\Fudan\Fudan Lib\Fudan Lib 0.0.4\ADC internal accumulation mode
+#        query (conversion voltage)\IAR_EWARM\Debug\Obj\fm33a0xxev_pae.o"
+#        "D:\SVN\Fudan\Fudan Lib\Fudan Lib 0.0.4\ADC internal accumulation mode
+#        query (conversion voltage)\IAR_EWARM\Debug\Obj\fm33a0xxev_pmu.o"
+#        "D:\SVN\Fudan\Fudan Lib\Fudan Lib 0.0.4\ADC internal accumulation mode
+#        query (conversion voltage)\IAR_EWARM\Debug\Obj\fm33a0xxev_qspi.o"
+#        "D:\SVN\Fudan\Fudan Lib\Fudan Lib 0.0.4\ADC internal accumulation mode
+#        query (conversion voltage)\IAR_EWARM\Debug\Obj\fm33a0xxev_rmu.o"
+#        "D:\SVN\Fudan\Fudan Lib\Fudan Lib 0.0.4\ADC internal accumulation mode
+#        query (conversion voltage)\IAR_EWARM\Debug\Obj\fm33a0xxev_rng.o"
+#        "D:\SVN\Fudan\Fudan Lib\Fudan Lib 0.0.4\ADC internal accumulation mode
+#        query (conversion voltage)\IAR_EWARM\Debug\Obj\fm33a0xxev_rtc.o"
+#        "D:\SVN\Fudan\Fudan Lib\Fudan Lib 0.0.4\ADC internal accumulation mode
+#        query (conversion voltage)\IAR_EWARM\Debug\Obj\fm33a0xxev_spi.o"
+#        "D:\SVN\Fudan\Fudan Lib\Fudan Lib 0.0.4\ADC internal accumulation mode
+#        query (conversion voltage)\IAR_EWARM\Debug\Obj\fm33a0xxev_svd.o"
+#        "D:\SVN\Fudan\Fudan Lib\Fudan Lib 0.0.4\ADC internal accumulation mode
+#        query (conversion voltage)\IAR_EWARM\Debug\Obj\fm33a0xxev_u7816.o"
+#        "D:\SVN\Fudan\Fudan Lib\Fudan Lib 0.0.4\ADC internal accumulation mode
+#        query (conversion voltage)\IAR_EWARM\Debug\Obj\fm33a0xxev_uart.o"
+#        "D:\SVN\Fudan\Fudan Lib\Fudan Lib 0.0.4\ADC internal accumulation mode
+#        query (conversion voltage)\IAR_EWARM\Debug\Obj\fm33a0xxev_vrtc.o"
+#        "D:\SVN\Fudan\Fudan Lib\Fudan Lib 0.0.4\ADC internal accumulation mode
+#        query (conversion voltage)\IAR_EWARM\Debug\Obj\fm33a0xxev_wwdt.o"
+#        "D:\SVN\Fudan\Fudan Lib\Fudan Lib 0.0.4\ADC internal accumulation mode
+#        query (conversion voltage)\IAR_EWARM\Debug\Obj\main.o"
+#        "D:\SVN\Fudan\Fudan Lib\Fudan Lib 0.0.4\ADC internal accumulation mode
+#        query (conversion voltage)\IAR_EWARM\Debug\Obj\startup_FM33A0XXEV.o"
+#        "D:\SVN\Fudan\Fudan Lib\Fudan Lib 0.0.4\ADC internal accumulation mode
+#        query (conversion voltage)\IAR_EWARM\Debug\Obj\system_FM33A0XXEV.o"
+#        "D:\SVN\Fudan\Fudan Lib\Fudan Lib 0.0.4\ADC internal accumulation mode
+#        query (conversion voltage)\IAR_EWARM\Debug\Obj\user_init.o" -o
+#        "D:\SVN\Fudan\Fudan Lib\Fudan Lib 0.0.4\ADC internal accumulation mode
+#        query (conversion voltage)\IAR_EWARM\Debug\Exe\FM33A0XXEV.out" --map
+#        "D:\SVN\Fudan\Fudan Lib\Fudan Lib 0.0.4\ADC internal accumulation mode
+#        query (conversion voltage)\IAR_EWARM\Debug\List\FM33A0XXEV.map"
+#        --config "C:\Program Files (x86)\IAR Systems\Embedded Workbench
+#        8.0\arm\config\linker\FMSH\FM33A06XEV.icf" --semihosting --entry
+#        __iar_program_start --vfe --text_out locale)
+#
+###############################################################################
+
+*******************************************************************************
+*** RUNTIME MODEL ATTRIBUTES
+***
+
+CppFlavor       = *
+__SystemLibrary = DLib
+__dlib_version  = 6
+
+
+*******************************************************************************
+*** HEAP SELECTION
+***
+
+The basic heap was selected because no calls to memory allocation
+functions were found in the application outside of system library
+functions, and there are calls to deallocation functions in the
+application.
+
+
+*******************************************************************************
+*** PLACEMENT SUMMARY
+***
+
+"A0":  place at 0x00000000 { ro section .intvec };
+"P1":  place in [from 0x00000000 to 0x0007ffff] { ro };
+define block CSTACK with size = 2K, alignment = 8 { };
+define block HEAP with size = 0M, alignment = 8 { };
+"P2":  place in [from 0x20000000 to 0x20013fff] {
+          rw, block CSTACK, block HEAP };
+initialize by copy { rw };
+
+  Section            Kind        Address   Size  Object
+  -------            ----        -------   ----  ------
+"A0":                                      0xc0
+  .intvec            ro code  0x00000000   0xc0  startup_FM33A0XXEV.o [1]
+                            - 0x000000c0   0xc0
+
+"P1":                                     0xa48
+  .text              ro code  0x000000c0  0x1e0  user_init.o [1]
+  .text              ro code  0x000002a0  0x100  fm33a0xxev_gpio.o [1]
+  .text              ro code  0x000003a0  0x104  fm33a0xxev_cmu.o [1]
+  .text              ro code  0x000004a4   0x18  fm33a0xxev_flash.o [1]
+  .text              ro code  0x000004bc   0x50  fm33a0xxev_rmu.o [1]
+  .text              ro code  0x0000050c  0x1ac  ADC_interface.o [1]
+  .text              ro code  0x000006b8   0x20  IxxToFlt.o [4]
+  .text              ro code  0x000006d8   0xaa  FltDiv.o [4]
+  .text              ro code  0x00000782    0x2  startup_FM33A0XXEV.o [1]
+  .text              ro code  0x00000784   0x1c  fm33a0xxev_cdif.o [1]
+  .text              ro code  0x000007a0   0x64  fm33a0xxev_vrtc.o [1]
+  .text              ro code  0x00000804   0xc8  fm33a0xxev_adc.o [1]
+  .text              ro code  0x000008cc   0xb0  FltMul.o [4]
+  .text              ro code  0x0000097c   0x3a  FltToS32.o [4]
+  .text              ro code  0x000009b6   0x30  copy_init3.o [5]
+  .text              ro code  0x000009e6    0x2  startup_FM33A0XXEV.o [1]
+  .text              ro code  0x000009e8   0x28  data_init.o [5]
+  .iar.init_table    const    0x00000a10   0x14  - Linker created -
+  .text              ro code  0x00000a24   0x20  main.o [1]
+  .text              ro code  0x00000a44   0x1e  cmain.o [5]
+  .text              ro code  0x00000a62    0x4  low_level_init.o [3]
+  .text              ro code  0x00000a66    0x8  exit.o [3]
+  .text              ro code  0x00000a6e    0x2  startup_FM33A0XXEV.o [1]
+  .text              ro code  0x00000a70    0xa  cexit.o [5]
+  .text              ro code  0x00000a7a    0x2  startup_FM33A0XXEV.o [1]
+  .text              ro code  0x00000a7c   0x14  exit.o [6]
+  .text              ro code  0x00000a90   0x10  startup_FM33A0XXEV.o [1]
+  .text              ro code  0x00000aa0   0x10  system_FM33A0XXEV.o [1]
+  .text              ro code  0x00000ab0    0xc  cstartup_M.o [5]
+  Initializer bytes  const    0x00000abc    0xc  <for P2-1>
+  .text              ro code  0x00000ac8    0x2  startup_FM33A0XXEV.o [1]
+  .text              ro code  0x00000aca    0x2  startup_FM33A0XXEV.o [1]
+  .text              ro code  0x00000acc    0x2  startup_FM33A0XXEV.o [1]
+  .text              ro code  0x00000ace    0x2  startup_FM33A0XXEV.o [1]
+  .text              ro code  0x00000ad0    0x2  startup_FM33A0XXEV.o [1]
+  .text              ro code  0x00000ad2    0x2  startup_FM33A0XXEV.o [1]
+  .text              ro code  0x00000ad4    0x2  startup_FM33A0XXEV.o [1]
+  .text              ro code  0x00000ad6    0x2  startup_FM33A0XXEV.o [1]
+  .text              ro code  0x00000ad8    0x2  startup_FM33A0XXEV.o [1]
+  .text              ro code  0x00000ada    0x2  startup_FM33A0XXEV.o [1]
+  .text              ro code  0x00000adc    0x2  startup_FM33A0XXEV.o [1]
+  .text              ro code  0x00000ade    0x2  startup_FM33A0XXEV.o [1]
+  .text              ro code  0x00000ae0    0x2  startup_FM33A0XXEV.o [1]
+  .text              ro code  0x00000ae2    0x2  startup_FM33A0XXEV.o [1]
+  .text              ro code  0x00000ae4    0x2  startup_FM33A0XXEV.o [1]
+  .text              ro code  0x00000ae6    0x2  startup_FM33A0XXEV.o [1]
+  .text              ro code  0x00000ae8    0x2  startup_FM33A0XXEV.o [1]
+  .text              ro code  0x00000aea    0x2  startup_FM33A0XXEV.o [1]
+  .text              ro code  0x00000aec    0x2  startup_FM33A0XXEV.o [1]
+  .text              ro code  0x00000aee    0x2  startup_FM33A0XXEV.o [1]
+  .text              ro code  0x00000af0    0x2  startup_FM33A0XXEV.o [1]
+  .text              ro code  0x00000af2    0x2  startup_FM33A0XXEV.o [1]
+  .text              ro code  0x00000af4    0x2  startup_FM33A0XXEV.o [1]
+  .text              ro code  0x00000af6    0x2  startup_FM33A0XXEV.o [1]
+  .text              ro code  0x00000af8    0x2  startup_FM33A0XXEV.o [1]
+  .text              ro code  0x00000afa    0x2  startup_FM33A0XXEV.o [1]
+  .text              ro code  0x00000afc    0x2  startup_FM33A0XXEV.o [1]
+  .text              ro code  0x00000afe    0x2  startup_FM33A0XXEV.o [1]
+  .text              ro code  0x00000b00    0x2  startup_FM33A0XXEV.o [1]
+  .text              ro code  0x00000b02    0x2  startup_FM33A0XXEV.o [1]
+  .text              ro code  0x00000b04    0x2  startup_FM33A0XXEV.o [1]
+  .text              ro code  0x00000b06    0x2  startup_FM33A0XXEV.o [1]
+  .rodata            const    0x00000b08    0x0  copy_init3.o [5]
+                            - 0x00000b08  0xa48
+
+"P2", part 1 of 2:                          0xc
+  P2-1                        0x20000000    0xb  <Init block>
+    .data            inited   0x20000000    0x4  system_FM33A0XXEV.o [1]
+    .bss             inited   0x20000004    0x4  ADC_interface.o [1]
+    .bss             inited   0x20000008    0x2  main.o [1]
+    .bss             inited   0x2000000a    0x1  main.o [1]
+                            - 0x2000000b    0xb
+
+"P2", part 2 of 2:                        0x800
+  CSTACK                      0x20000010  0x800  <Block>
+    CSTACK           uninit   0x20000010  0x800  <Block tail>
+                            - 0x20000810  0x800
+
+
+*******************************************************************************
+*** INIT TABLE
+***
+
+          Address     Size
+          -------     ----
+Copy (__iar_copy_init3)
+    1 source range, total size 0xc (109% of destination):
+          0x00000abc   0xc
+    1 destination range, total size 0xb:
+          0x20000000   0xb
+
+
+
+*******************************************************************************
+*** MODULE SUMMARY
+***
+
+    Module                ro code  ro data  rw data
+    ------                -------  -------  -------
+D:\SVN\Fudan\Fudan Lib\Fudan Lib 0.0.4\ADC internal accumulation mode query (conversion voltage)\IAR_EWARM\Debug\Obj: [1]
+    ADC_interface.o           428        4        4
+    fm33a0xxev_adc.o          200
+    fm33a0xxev_cdif.o          28
+    fm33a0xxev_cmu.o          260
+    fm33a0xxev_flash.o         24
+    fm33a0xxev_gpio.o         256
+    fm33a0xxev_rmu.o           80
+    fm33a0xxev_vrtc.o         100
+    main.o                     32        3        3
+    startup_FM33A0XXEV.o      280
+    system_FM33A0XXEV.o        16        4        4
+    user_init.o               480
+    -----------------------------------------------
+    Total:                  2 184       11       11
+
+command line: [2]
+    -----------------------------------------------
+    Total:
+
+dl6M_tln.a: [3]
+    exit.o                      8
+    low_level_init.o            4
+    -----------------------------------------------
+    Total:                     12
+
+m6M_tl.a: [4]
+    FltDiv.o                  170
+    FltMul.o                  176
+    FltToS32.o                 58
+    IxxToFlt.o                 32
+    -----------------------------------------------
+    Total:                    436
+
+rt6M_tl.a: [5]
+    cexit.o                    10
+    cmain.o                    30
+    copy_init3.o               48
+    cstartup_M.o               12
+    data_init.o                40
+    -----------------------------------------------
+    Total:                    140
+
+shb_l.a: [6]
+    exit.o                     20
+    -----------------------------------------------
+    Total:                     20
+
+    Linker created                      21    2 048
+---------------------------------------------------
+    Grand Total:            2 792       32    2 059
+
+
+*******************************************************************************
+*** ENTRY LIST
+***
+
+Entry                      Address   Size  Type      Object
+-----                      -------   ----  ----      ------
+.iar.init_table$$Base   0x00000a10          --   Gb  - Linker created -
+.iar.init_table$$Limit  0x00000a24          --   Gb  - Linker created -
+?main                   0x00000a45         Code  Gb  cmain.o [5]
+ADC_CFGR_BUFEN_Setable  0x00000885   0x24  Code  Gb  fm33a0xxev_adc.o [1]
+ADC_CFGR_BUFSEL_Set     0x000008a9   0x14  Code  Gb  fm33a0xxev_adc.o [1]
+ADC_CR_ADC_IE_Setable   0x00000805   0x24  Code  Gb  fm33a0xxev_adc.o [1]
+ADC_CR_EN_Setable       0x0000083d   0x24  Code  Gb  fm33a0xxev_adc.o [1]
+ADC_CR_MODE_Set         0x00000829   0x14  Code  Gb  fm33a0xxev_adc.o [1]
+ADC_ISR_ADC_IF_Chk      0x00000873   0x12  Code  Gb  fm33a0xxev_adc.o [1]
+ADC_ISR_ADC_IF_Clr      0x0000086b    0x8  Code  Gb  fm33a0xxev_adc.o [1]
+ADC_TRIM_Write          0x00000861    0xa  Code  Gb  fm33a0xxev_adc.o [1]
+ADC_gInit               0x0000050d  0x132  Code  Gb  ADC_interface.o [1]
+ADC_gStart              0x0000063f   0x5a  Code  Gb  ADC_interface.o [1]
+AnalogIO                0x0000019b   0x5e  Code  Gb  user_init.o [1]
+CDIF_CR_INTF_EN_Setable
+                        0x00000785   0x18  Code  Gb  fm33a0xxev_cdif.o [1]
+CMU_PERCLK_SetableEx    0x00000419   0x5c  Code  Gb  fm33a0xxev_cmu.o [1]
+CMU_SYSCLKCR_AHBPRES_Set
+                        0x000003dd   0x16  Code  Gb  fm33a0xxev_cmu.o [1]
+CMU_SYSCLKCR_APBPRES_Set
+                        0x000003c7   0x16  Code  Gb  fm33a0xxev_cmu.o [1]
+CMU_SYSCLKCR_SLP_ENEXTI_Setable
+                        0x000003a1   0x26  Code  Gb  fm33a0xxev_cmu.o [1]
+CMU_SYSCLKCR_SYSCLKSEL_Set
+                        0x000003f3   0x14  Code  Gb  fm33a0xxev_cmu.o [1]
+CMU_SysClk_Init         0x00000475   0x1e  Code  Gb  fm33a0xxev_cmu.o [1]
+CSTACK$$Base            0x20000010          --   Gb  - Linker created -
+CSTACK$$Limit           0x20000810          --   Gb  - Linker created -
+DEBUG_Init              0x0000025b    0x8  Code  Gb  user_init.o [1]
+FLS_RDCR_WAIT_Set       0x000004a5   0x14  Code  Gb  fm33a0xxev_flash.o [1]
+GPIO_Get_InitPara       0x00000317   0x8a  Code  Gb  fm33a0xxev_gpio.o [1]
+GPIO_Init               0x000002b7   0x60  Code  Gb  fm33a0xxev_gpio.o [1]
+GPIOx_ANEN_Setable      0x000002a1   0x16  Code  Gb  fm33a0xxev_gpio.o [1]
+IWDT_Clr                0x00000211    0x8  Code  Gb  user_init.o [1]
+IWDT_Init               0x00000219   0x16  Code  Gb  user_init.o [1]
+Init_SysClk             0x0000022f   0x1e  Code  Gb  user_init.o [1]
+Init_SysClk_Gen         0x0000024d    0xe  Code  Gb  user_init.o [1]
+Init_SysTick            0x0000017d   0x1e  Code  Gb  user_init.o [1]
+Init_System             0x00000279   0x28  Code  Gb  user_init.o [1]
+RMU_BORCR_OFF_BOR_Setable
+                        0x000004e1   0x24  Code  Gb  fm33a0xxev_rmu.o [1]
+RMU_PDRCR_PDREN_Setable
+                        0x000004bd   0x24  Code  Gb  fm33a0xxev_rmu.o [1]
+Region$$Table$$Base     0x00000a10          --   Gb  - Linker created -
+Region$$Table$$Limit    0x00000a24          --   Gb  - Linker created -
+ResultADC               0x20000008    0x2  Data  Gb  main.o [1]
+SysTick_Config          0x0000014d   0x30  Code  Lc  user_init.o [1]
+SystemCoreClock         0x20000000    0x4  Data  Gb  system_FM33A0XXEV.o [1]
+SystemInit              0x00000aa1    0x8  Code  Gb  system_FM33A0XXEV.o [1]
+VRTC_ADCCR_CKE_Setable  0x000007d9   0x24  Code  Gb  fm33a0xxev_vrtc.o [1]
+VRTC_ADCCR_CKS_Set      0x000007c5   0x14  Code  Gb  fm33a0xxev_vrtc.o [1]
+VRTC_RCMFCR_EN_Setable  0x000007a1   0x24  Code  Gb  fm33a0xxev_vrtc.o [1]
+__ICFEDIT_region_RAM_end__ {Abs}
+                        0x20013fff         Data  Gb  command line/config [2]
+__ICFEDIT_region_RAM_start__ {Abs}
+                        0x20000000         Data  Gb  command line/config [2]
+__NVIC_SetPriority      0x000000c1   0x8c  Code  Lc  user_init.o [1]
+__aeabi_f2iz            0x0000097d         Code  Gb  FltToS32.o [4]
+__aeabi_fdiv            0x000006d9         Code  Gb  FltDiv.o [4]
+__aeabi_fmul            0x000008cd         Code  Gb  FltMul.o [4]
+__aeabi_ui2f            0x000006b9         Code  Gb  IxxToFlt.o [4]
+__cmain                 0x00000a45         Code  Gb  cmain.o [5]
+__exit                  0x00000a7d   0x14  Code  Gb  exit.o [6]
+__iar_copy_init3        0x000009b7   0x30  Code  Gb  copy_init3.o [5]
+__iar_data_init3        0x000009e9   0x28  Code  Gb  data_init.o [5]
+__iar_program_start     0x00000ab1         Code  Gb  cstartup_M.o [5]
+__iar_systems$$module {Abs}
+                        0x00000001         Data  Gb  command line/config [2]
+__low_level_init        0x00000a63    0x4  Code  Gb  low_level_init.o [3]
+__vector_table          0x00000000         Data  Gb  startup_FM33A0XXEV.o [1]
+_call_main              0x00000a51         Code  Gb  cmain.o [5]
+_exit                   0x00000a71         Code  Gb  cexit.o [5]
+_main                   0x00000a5f         Code  Gb  cmain.o [5]
+exit                    0x00000a67    0x8  Code  Gb  exit.o [3]
+main                    0x00000a25   0x18  Code  Gb  main.o [1]
+s                       0x2000000a    0x1  Data  Gb  main.o [1]
+sensitivity             0x20000004    0x4  Data  Lc  ADC_interface.o [1]
+
+
+[1] = D:\SVN\Fudan\Fudan Lib\Fudan Lib 0.0.4\ADC internal accumulation mode query (conversion voltage)\IAR_EWARM\Debug\Obj
+[2] = command line
+[3] = dl6M_tln.a
+[4] = m6M_tl.a
+[5] = rt6M_tl.a
+[6] = shb_l.a
+
+  2 792 bytes of readonly  code memory
+     32 bytes of readonly  data memory
+  2 059 bytes of readwrite data memory
+
+Errors: none
+Warnings: none

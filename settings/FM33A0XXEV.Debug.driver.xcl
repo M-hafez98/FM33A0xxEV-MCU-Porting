@@ -1,0 +1,19 @@
+"--endian=little" 
+
+"--cpu=SC000" 
+
+"--fpu=None" 
+
+"-p" 
+
+"C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.0\arm\CONFIG\debugger\FMSH\FM33A06XEV.ddf" 
+
+"--semihosting" 
+
+"--device=FM33A06XEV" 
+
+"--multicore_nr_of_cores=1" 
+
+
+
+

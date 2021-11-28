@@ -1,0 +1,8 @@
+Res. = 2 ^ 10 = 1024;
+
+delta v = Vref / (Res-1)
+
+Dout = delta v * ADCData
+
+CDIF : Cross power domain interface, Analog Peripheral Control Register
+CDIF is a special control interface through which the software can configure the registers related to RCMF, RCLP, ADC, XTLF
