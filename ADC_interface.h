@@ -28,9 +28,9 @@ typedef enum
 	DONE
 }ADConversionStatus_t;
 
-void ADC_gRead(uint32_t, uint32_t, uint32_t);
+void ADC_gInit(ADC_chanel_t, uint32_t, uint32_t);
 
-ADConversionStatus_t ADC_gStart(uint32_t ch, uint32_t res, uint32_t pres, uint16_t *);
+ADConversionStatus_t ADC_gRead(ADC_chanel_t ch, uint32_t res, uint32_t pres, uint16_t *);
 
 void ADC_gSetCallBack(void (*callBack)(void));
 
