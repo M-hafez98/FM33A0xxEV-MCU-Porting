@@ -2,6 +2,42 @@
 
 static void (*callBackAPI)(void);
 
+//IO digital special function port  
+//type 0 = ordinary 
+//type 1 = OD (OD function is only supported by some special functions )
+//type 2 = Normal + pull up  
+//type 3 = OD+ pull up 
+//#define ALTFUN_NORMAL				0
+//#define ALTFUN_OPENDRAIN			1
+//#define ALTFUN_PULLUP				2
+//#define ALTFUN_OPENDRAIN_PULLUP	3
+static void AltFunIO( GPIO_Type* GPIOx, uint32_t GPIO_Pin, uint8_t Type  )
+{																
+	GPIO_InitTypeDef  GPIO_InitStructure;
+	GPIO_InitTypeDef  GPIO_InitStructureRun;
+	
+	GPIO_Get_InitPara(GPIOx, GPIO_Pin, &GPIO_InitStructureRun);
+  
+  if( (GPIO_InitStructureRun.Pin		!= GPIO_Pin) ||
+    (GPIO_InitStructureRun.PxINEN	!= GPIO_IN_Dis) ||
+    (((Type & 0x01) == 0)&&(GPIO_InitStructureRun.PxODEN	!= GPIO_OD_Dis)) ||
+    (((Type & 0x01) != 0)&&(GPIO_InitStructureRun.PxODEN	!= GPIO_OD_En)) ||
+    (((Type & 0x02) == 0)&&(GPIO_InitStructureRun.PxPUEN	!= GPIO_PU_Dis)) ||
+    (((Type & 0x02) != 0)&&(GPIO_InitStructureRun.PxPUEN	!= GPIO_PU_En)) ||
+    (GPIO_InitStructureRun.PxFCR	!= GPIO_FCR_DIG) )
+  {
+    GPIO_InitStructure.Pin = GPIO_Pin;
+    GPIO_InitStructure.PxINEN = GPIO_IN_Dis;
+    if( (Type & 0x01) == 0 )	GPIO_InitStructure.PxODEN = GPIO_OD_Dis;
+    else						GPIO_InitStructure.PxODEN = GPIO_OD_En;
+    if( (Type & 0x02) == 0 )	GPIO_InitStructure.PxPUEN = GPIO_PU_Dis;
+    else						GPIO_InitStructure.PxPUEN = GPIO_PU_En;	
+    GPIO_InitStructure.PxFCR = GPIO_FCR_DIG;
+     
+    GPIO_Init(GPIOx, &GPIO_InitStructure);		
+  }
+}
+
 void SPI_gInit(SPI_Type* SPIx, uint32_t mode, uint32_t waitTime, uint32_t pres, uint32_t FF, uint32_t DL, uint32_t ssnControl) {
 	/*Turn on the SPIx bus clock and configure the AF for the corresponding GPIO pins*/
 	if (SPIx == SPI1) {
