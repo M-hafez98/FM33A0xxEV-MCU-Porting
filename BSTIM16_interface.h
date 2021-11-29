@@ -1,7 +1,15 @@
 #ifndef __BSTIM16_INTERFACE_H__
 #define __BSTIM16_INTERFACE_H__
 
-#include "define_all.h"
+//#include "define_all.h"
+#include "FM33A0XXEV.h"
+#include "fm33a0xxev_include_all.h"
+//#include <stdio.h>
+#include <stdint.h>
+//#include <string.h>
+//#include "bintohex.h"
+//#include "user_init.h"
+
 
 /*clocks value*/
 #define RCHF 				(8000000)
@@ -18,9 +26,9 @@
 #define APB_PRES_DIV_BY_1	(0x3)//0xx
 
 
-void BSTIM16_gInit(BT_Type*, uint16_t);
-void BSTIM16_gStart(BT_Type*);
-void BSTIM16_gStop(BT_Type*);
+void BSTIM16_gInit(void);
+void BSTIM16_gStart(void);
+void BSTIM16_gStop(void);
 
 
 
