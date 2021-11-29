@@ -1,10 +1,10 @@
-<?xml version="1.0" encoding="iso-8859-1"?>
-
+<?xml version="1.0" encoding="UTF-8"?>
 <workspace>
-  <project>
-    <path>$WS_DIR$\FM33A0XXEV.ewp</path>
-  </project>
-  <batchBuild/>
+    <project>
+        <path>$WS_DIR$\FM33A0XXEV.ewp</path>
+    </project>
+    <project>
+        <path>$WS_DIR$\..\..\..\..\..\FW\Branch\Fudan Gas\IAR compiler\Gas_fudan.ewp</path>
+    </project>
+    <batchBuild />
 </workspace>
-
-

@@ -1,7 +1,15 @@
 #ifndef __ADC_INTERFACE_H__
 #define __ADC_INTERFACE_H__
 
-#include "define_all.h"
+//#include "define_all.h"
+
+#include "FM33A0XXEV.h"
+//#include <stdio.h>
+#include <stdint.h>
+//#include <string.h>
+//#include "bintohex.h"
+#include "user_init.h"
+
 
 #define VREF				(3.0)
 #define ADC_TIME_OUT		(300U)
