@@ -1,7 +1,14 @@
 #ifndef __BSTIM_INTERFACE_H__
 #define __BSTIM_INTERFACE_H__
 
-#include "define_all.h"
+//#include "define_all.h"
+#include "FM33A0XXEV.h"
+#include "fm33a0xxev_include_all.h"
+//#include <stdio.h>
+#include <stdint.h>
+//#include <string.h>
+//#include "bintohex.h"
+#include "user_init.h"
 
 /*clock sources*/
 #define SYS_CLK_SRC_MASK	(0x7)
@@ -27,6 +34,7 @@
 void BSTIM_gInit(void);
 void BSTIM_gStart(void);
 void BSTIM_gStop(void);
+void BSTIM_gSetCallBack(void (*callBack)(void));
 
 
 

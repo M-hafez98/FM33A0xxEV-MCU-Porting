@@ -1,5 +1,7 @@
 #include "BSTIM_interface.h"
 
+static void (*callBackAPI)(void);
+
 
 void BSTIM_gInit(void) {
 	uint32_t temp, sysclk_hz, BSTIM_pres = 0, ARR_value = 0;
@@ -53,17 +55,23 @@ void BSTIM_gInit(void) {
 	BSTIM_PSCR_Write(BSTIM_pres);
 	BSTIM_ARR_Write(ARR_value);
 	NVIC_SetPriority(BSTIM_IRQn ,2);//Interrupt priority configuration 
-	NVIC_EnableIRQ(BSTIM_IRQn );
-	BSTIM_IER_UIE_Setable(ENABLE); //Update interrupt enable
 }
 void BSTIM_gStart(void){
+	NVIC_EnableIRQ(BSTIM_IRQn);
+	BSTIM_IER_UIE_Setable(ENABLE); //Update interrupt enable
 	BSTIM_CR1_CEN_Setable(ENABLE); //Counter enable
 }
 void BSTIM_gStop(void){
-	BSTIM_CR1_CEN_Setable(DISABLE); //Counter enable
+	BSTIM_CR1_CEN_Setable(DISABLE); //Counter disable
+	NVIC_DisableIRQ(BSTIM_IRQn);
+	BSTIM_IER_UIE_Setable(DISABLE); //Update interrupt disable
 }
 
 void BSTIM_IRQHandler(void)
 {   
 	
+}
+
+void BSTIM_gSetCallBack(void (*callBack)(void)) {
+	callBackAPI = callBack;
 }
