@@ -4,7 +4,12 @@ static float sensitivity;
 
 static void (*callBackAPI)(void);
 
-void ADC_gInit(ADC_chanel_t ch, uint32_t res, uint32_t pres) {
+/*
+	pres values are:
+	VRTC_ADCCR_CKS_RCMF, VRTC_ADCCR_CKS_RCMF_2, VRTC_ADCCR_CKS_RCMF_4, VRTC_ADCCR_CKS_RCMF_8, VRTC_ADCCR_CKS_RCMF_16, VRTC_ADCCR_CKS_RCMF_32
+*/
+
+static void ADC_iInit(ADC_chanel_t ch, ADC_resolution_t res, uint32_t pres) {
 
 	uint32_t resolution = (1U << res)-1U;
 	sensitivity = (float) VREF / resolution;
@@ -49,7 +54,7 @@ void ADC_gInit(ADC_chanel_t ch, uint32_t res, uint32_t pres) {
 	CDIF_CR_INTF_EN_Setable(ENABLE); // is used to access and config ADC regs. this adds 10 uA of power consumption									//跨电源域接口使能
 	//VRTC_Init_RCMF_Trim(); // mh: for sim
 	VRTC_RCMFCR_EN_Setable(ENABLE); // RCMF clk enable
-	VRTC_ADCCR_CKS_Set(pres); //ADC working clock presca ler selection, i.e: VRTC_ADCCR_CKS_RCMF
+	VRTC_ADCCR_CKS_Set(pres); //ADC working clock prescaler selection, i.e: VRTC_ADCCR_CKS_RCMF
 	VRTC_ADCCR_CKE_Setable(ENABLE);	// ADC operation clock enable
 	ADC_CFGR_BUFSEL_Set(ch); //ADC input channel buffer selection, i.e ADC_CFGR_BUFSEL_ADC_IN5
 	ADC_CFGR_BUFEN_Setable(ENABLE);	// ADC input buffer enable
@@ -57,23 +62,22 @@ void ADC_gInit(ADC_chanel_t ch, uint32_t res, uint32_t pres) {
 	ADC_TRIM_Write(resolution);
 	ADC_CR_ADC_IE_Setable(DISABLE); //Internal accumulation mode interrupt disabled
 	ADC_CR_EN_Setable(DISABLE); // ADC disable
-        ADC_ISR_ADC_IF_Clr(); //Clear interrupt flag
+    ADC_ISR_ADC_IF_Clr(); //Clear interrupt flag
 }
 
-ADConversionStatus_t ADC_gRead(ADC_chanel_t ch, uint32_t res, uint32_t pres, uint16_t * ADCData) {
-	uint16_t timeOut=0;
-	ADC_gInit(ch, res, pres);
+ADC_conversion_status_t ADC_gRead(ADC_chanel_t ch, uint16_t * ADCData) {
+	ADC_conversion_status_t status = TIME_OUT;
+	uint16_t timeOut = 0;
+	ADC_iInit(ch, ADC_10_RESOLUTION, VRTC_ADCCR_CKS_RCMF_16);
 	ADC_CR_EN_Setable(ENABLE);
 	while((++timeOut < ADC_TIME_OUT) && (!ADC_ISR_ADC_IF_Chk()));
 	ADC_ISR_ADC_IF_Clr(); //Clear interrupt flag
 	ADC_CR_EN_Setable(DISABLE); // ADC disable
 	if(timeOut < ADC_TIME_OUT) {
-		*ADCData = (uint16_t) (ADC->DR) * sensitivity;
-		return DONE;
+		*ADCData = (uint16_t) ((ADC->DR) * sensitivity);
+		status = DONE;
 	}
-	else {
-		return TIME_OUT;
-	}
+	return status;
 }
 
 

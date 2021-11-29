@@ -22,15 +22,23 @@ typedef enum
 	ADC_IN12
 }ADC_chanel_t;
 
+
+typedef enum
+{
+	ADC_9_RESOLUTION = 9,
+	ADC_10_RESOLUTION = 10,
+	ADC_11_RESOLUTION = 11
+}ADC_resolution_t;
+
 typedef enum
 {
 	TIME_OUT = 0,
 	DONE
-}ADConversionStatus_t;
+}ADC_conversion_status_t;
 
-void ADC_gInit(ADC_chanel_t, uint32_t, uint32_t);
+//void ADC_iInit(ADC_chanel_t ch, ADC_resolution_t res, uint32_t pres);
 
-ADConversionStatus_t ADC_gRead(ADC_chanel_t ch, uint32_t res, uint32_t pres, uint16_t *);
+ADC_conversion_status_t ADC_gRead(ADC_chanel_t ch, uint16_t * ADCData);
 
 void ADC_gSetCallBack(void (*callBack)(void));
 
