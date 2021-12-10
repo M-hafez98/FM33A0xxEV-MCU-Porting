@@ -115,7 +115,7 @@ void SPI_gInit(SPI_Type* SPIx, uint32_t mode, uint32_t waitTime, uint32_t pres, 
 
 SPI_comm_status_t SPI_gTX_RX(SPI_Type* SPIx, uint32_t* TxBuf, uint32_t* RxBuf, uint32_t TxBufSize) {
 	SPIx_CR2_SSN_Set(SPIx, SPIx_CR2_SSN_LOW);
-	while(--TxBufSize) {
+	while(TxBufSize--) {
 		SPIx_TXBUF_Write(SPIx, *TxBuf++);
 	    while (!SPIx_ISR_TXBE_Chk(SPIx));
 	    while (!SPIx_ISR_RXBF_Chk(SPIx));
@@ -128,7 +128,7 @@ SPI_comm_status_t SPI_gTX_RX(SPI_Type* SPIx, uint32_t* TxBuf, uint32_t* RxBuf, u
 
 SPI_comm_status_t SPI_gRX(SPI_Type* SPIx, uint32_t* RxBuf, uint32_t RxBufSize) {
 	SPIx_CR2_SSN_Set(SPIx, SPIx_CR2_SSN_LOW);
-	while(--RxBufSize) {
+	while(RxBufSize--) {
 		SPIx_TXBUF_Write(SPIx, 0x00); // 0x00 is dummy value
 	    while (!SPIx_ISR_TXBE_Chk(SPIx));
 	    while (!SPIx_ISR_RXBF_Chk(SPIx));
